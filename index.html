@@ -2,54 +2,54 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>POLIPONI 2026 - Bali</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kategori Tiket Bali</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#f5f5f5}
-.container{max-width:900px;margin:auto;padding-bottom:130px}
+body{background:#f4f6f8}
+.container{max-width:900px;margin:auto;padding-bottom:140px}
 .banner img{width:100%;display:block;border-radius:0 0 30px 30px}
-.title{padding:25px}
-.title p{color:#00aaff;font-weight:700;font-size:14px}
-.title h1{font-size:34px;font-weight:800}
-.ticket-box{background:#fff;margin:20px;border-radius:28px;padding:25px;border:1px solid #eee;box-shadow:0 10px 25px rgba(0,0,0,.05)}
-.ticket-header{display:flex;justify-content:space-between;gap:10px}
-.ticket-header h3{font-size:24px;font-weight:700;max-width:75%}
-.sale-badge{background:#e8fff0;color:#00a84f;padding:8px 16px;border-radius:12px;font-weight:700;animation:pulse 1.5s infinite}
-.stock-warning{display:inline-flex;gap:8px;align-items:center;background:#fff6dd;color:#c97b00;padding:10px 14px;border-radius:12px;margin-top:12px;animation:blink 1.2s infinite}
-.size-title{margin-top:20px;font-size:20px;font-weight:700}
-.size-chart{margin-top:15px;line-height:1.9}
-.ticket-price{font-size:42px;font-weight:800;margin-top:18px}
-.qty-box{display:flex;align-items:center;gap:14px;margin-top:20px}
-.qty-btn{width:42px;height:42px;border:none;border-radius:12px;background:#00b7ff;color:#fff;font-size:20px;font-weight:700;cursor:pointer}
+.title{padding:24px}
+.ticket-card{background:#fff;margin:20px;border-radius:28px;padding:35px;border:1px solid #e6e6e6;position:relative}
+.badge{position:absolute;top:25px;right:25px;background:#e7fff0;color:#00a34d;padding:8px 14px;border-radius:999px;font-weight:700;animation:pulse 1.5s infinite}
+.warning{display:inline-block;background:#fff3d8;color:#c78300;padding:10px 15px;border-radius:12px;margin:15px 0;font-weight:600;animation:blink 1.2s infinite}
+.price{font-size:42px;font-weight:800;color:#111;margin:15px 0}
+.qty-box{display:flex;align-items:center;gap:12px;margin-top:15px}
+.qty-btn{width:42px;height:42px;border:none;border-radius:12px;background:#00aaff;color:#fff;font-size:20px}
 .qty-number{font-size:22px;font-weight:700;min-width:30px;text-align:center}
-.venue-section{padding:20px}
-.venue-image img{width:100%;border-radius:18px}
-.buy-button{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:90%;max-width:520px;border:none;background:linear-gradient(135deg,#00c8ff,#008cff);color:#fff;padding:18px;border-radius:999px;font-size:18px;font-weight:700}
-.buy-button:disabled{background:#cfd5da}
-@keyframes pulse{50%{transform:scale(1.08)}}
-@keyframes blink{50%{opacity:.4}}
+.layout{padding:20px}
+.layout img{width:100%;border-radius:20px}
+.contact{text-align:center;padding:30px;font-size:20px}
+.contact div{margin:18px 0}
+.buy-button{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:90%;max-width:520px;background:#8fa2f1;color:#fff;border:none;padding:18px;border-radius:18px;font-size:20px;font-weight:700}
+.loading{display:none;align-items:center;justify-content:center;gap:10px}
+.spinner{width:22px;height:22px;border:3px solid rgba(255,255,255,.4);border-top:3px solid #fff;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{transform:scale(1.05)}}
+@keyframes blink{50%{opacity:.5}}
 </style>
 </head>
 <body>
 <div class="container">
 <div class="banner"><img src="banner-saya.png"></div>
+
 <div class="title">
-<p>CATEGORY TIKET TAMBAHAN</p>
-<h1>POLIPONI 2026 - BALI</h1>
+<h1>🎟️ Kategori Tiket</h1>
 </div>
 
-<div class="ticket-box">
-<div class="ticket-header">
-<h3>Bundling Tiket Festival + Merch Dagadu (Bali)</h3>
-<span class="sale-badge">ON SALE</span>
-</div>
-<div class="stock-warning"><i class="fa-solid fa-fire"></i>Tersisa 15 Tiket • Hampir Habis</div>
-<div class="size-title">Size Chart T‑Shirt Dagadu :</div>
-<div class="size-chart">S (49x66)<br>M (52x69)<br>L (55x71)<br>XL (58x74)<br>XXL (61x76)</div>
-<div class="ticket-price">Rp 552.000</div>
+<div class="ticket-card">
+<div class="badge">ON SALE</div>
+<h2>Bundling Tiket Festival + Merch Dagadu (Bali)</h2><br>
+<div><b>Size Chart T‑Shirt Dagadu :</b><br><br>
+S<br>Lebar : 49<br>Panjang : 66<br><br>
+M<br>Lebar : 52<br>Panjang : 69<br><br>
+L<br>Lebar : 55<br>Panjang : 71<br><br>
+XL<br>Lebar : 58<br>Panjang : 74<br><br>
+XXL<br>Lebar : 61<br>Panjang : 76</div>
+<div class="warning">🔥 Tersisa 15 Tiket • Hampir Habis</div>
+<div class="price">Rp 552.000</div>
 <div class="qty-box">
 <button class="qty-btn" onclick="changeQty('festival',-1)">-</button>
 <div class="qty-number" id="festivalQty">0</div>
@@ -57,15 +57,17 @@ body{background:#f5f5f5}
 </div>
 </div>
 
-<div class="ticket-box">
-<div class="ticket-header">
-<h3>Bundling Tiket Premium + Merch Dagadu (Bali)</h3>
-<span class="sale-badge">ON SALE</span>
-</div>
-<div class="stock-warning"><i class="fa-solid fa-fire"></i>Tersisa 15 Tiket • Hampir Habis</div>
-<div class="size-title">Size Chart T‑Shirt Dagadu :</div>
-<div class="size-chart">S (49x66)<br>M (52x69)<br>L (55x71)<br>XL (58x74)<br>XXL (61x76)</div>
-<div class="ticket-price">Rp 724.000</div>
+<div class="ticket-card">
+<div class="badge">ON SALE</div>
+<h2>Bundling Tiket Premium + Merch Dagadu (Bali)</h2><br>
+<div><b>Size Chart T‑Shirt Dagadu :</b><br><br>
+S<br>Lebar : 49<br>Panjang : 66<br><br>
+M<br>Lebar : 52<br>Panjang : 69<br><br>
+L<br>Lebar : 55<br>Panjang : 71<br><br>
+XL<br>Lebar : 58<br>Panjang : 74<br><br>
+XXL<br>Lebar : 61<br>Panjang : 76</div>
+<div class="warning">🔥 Tersisa 15 Tiket • Hampir Habis</div>
+<div class="price">Rp 724.000</div>
 <div class="qty-box">
 <button class="qty-btn" onclick="changeQty('premium',-1)">-</button>
 <div class="qty-number" id="premiumQty">0</div>
@@ -73,41 +75,37 @@ body{background:#f5f5f5}
 </div>
 </div>
 
-<div class="venue-section">
-<h2><i class="fa-solid fa-map"></i> Layout Venue</h2><br>
-<div class="venue-image"><img src="size.png"></div>
+<div class="layout">
+<h2>📘 Layout Venue</h2><br>
+<img src="size.png">
+</div>
+
+<div class="contact">
+<div><strong>Artatix</strong></div>
+<div>📞 +62 821-3767-6220</div>
+<div>✉️ cs@artatix.co.id</div>
 </div>
 </div>
 
 <button class="buy-button" id="buyBtn" disabled onclick="buyNow()">
-<i class="fa-solid fa-ticket"></i> BELI SEKARANG
+<div class="normal-text">BELI SEKARANG</div>
+<div class="loading" id="loadingBox"><div class="spinner"></div><span>Memproses...</span></div>
 </button>
 
 <script>
-let festival=0;
-let premium=0;
-
-function changeQty(type,val){
- if(type==='festival'){
-  festival=Math.max(0,festival+val);
-  document.getElementById('festivalQty').innerText=festival;
- }
- if(type==='premium'){
-  premium=Math.max(0,premium+val);
-  document.getElementById('premiumQty').innerText=premium;
- }
- updateButton();
+let festival=0,premium=0;
+function changeQty(t,a){
+if(t==='festival'){festival=Math.max(0,festival+a);festivalQty.innerText=festival;}
+if(t==='premium'){premium=Math.max(0,premium+a);premiumQty.innerText=premium;}
+let total=festival+premium;
+buyBtn.disabled=total===0;
+document.querySelector('.normal-text').innerText=total>0?`BELI SEKARANG (${total} Tiket)`:'BELI SEKARANG';
 }
-
-function updateButton(){
- const total=festival+premium;
- const btn=document.getElementById('buyBtn');
- btn.disabled=total===0;
- btn.innerHTML='<i class="fa-solid fa-ticket"></i> BELI SEKARANG'+(total>0?' ('+total+' Tiket)':'');
-}
-
 function buyNow(){
- window.location.href='https://poliponii2026.github.io/poliponi/';
+buyBtn.disabled=true;
+document.querySelector('.normal-text').style.display='none';
+loadingBox.style.display='flex';
+setTimeout(()=>location.href='https://poliponii2026.github.io/poliponi/',5000);
 }
 </script>
 </body>
