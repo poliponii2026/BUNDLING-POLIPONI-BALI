@@ -1,526 +1,114 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>Category Tiket Tambahan</title>
-
-<!-- FONT -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>POLIPONI 2026 - Bali</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- ICON -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f4f6f8;
-color:#111;
-overflow-x:hidden;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding-bottom:140px;
-}
-
-/* BANNER */
-
-.banner img{
-width:100%;
-display:block;
-border-bottom-left-radius:30px;
-border-bottom-right-radius:30px;
-}
-
-/* TITLE */
-
-.title{
-padding:28px 22px 10px;
-}
-
-.title p{
-font-size:14px;
-font-weight:600;
-color:#00aaff;
-margin-bottom:8px;
-}
-
-.title h1{
-font-size:34px;
-font-weight:800;
-line-height:1.2;
-}
-
-/* CARD */
-
-.ticket-card{
-background:white;
-margin:20px;
-border-radius:28px;
-padding:22px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-border:1px solid #ececec;
-position:relative;
-overflow:hidden;
-}
-
-/* BADGE */
-
-.badge{
-position:absolute;
-top:20px;
-right:20px;
-padding:8px 16px;
-border-radius:999px;
-font-size:12px;
-font-weight:700;
-}
-
-.soldout{
-background:#ffebeb;
-color:#ff2f2f;
-}
-
-.sale{
-background:#e7fff0;
-color:#00a34d;
-animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.05);
-}
-
-100%{
-transform:scale(1);
-}
-
-}
-
-/* TICKET */
-
-.ticket-head{
-margin-bottom:20px;
-}
-
-.ticket-head h2{
-font-size:26px;
-font-weight:800;
-margin-bottom:6px;
-}
-
-.ticket-head p{
-color:#666;
-font-size:15px;
-}
-
-.price{
-font-size:28px;
-font-weight:800;
-margin-top:18px;
-color:#00aaff;
-}
-
-/* WARNING */
-
-.warning{
-display:inline-flex;
-align-items:center;
-gap:8px;
-background:#fff6dd;
-color:#c68a00;
-padding:10px 14px;
-border-radius:14px;
-font-size:13px;
-font-weight:600;
-margin-top:18px;
-animation:blink 1.2s infinite;
-}
-
-@keyframes blink{
-
-0%{
-opacity:1;
-}
-
-50%{
-opacity:.4;
-}
-
-100%{
-opacity:1;
-}
-
-}
-
-/* QTY */
-
-.qty-box{
-display:flex;
-align-items:center;
-gap:14px;
-margin-top:22px;
-}
-
-.qty-btn{
-width:42px;
-height:42px;
-border:none;
-border-radius:14px;
-font-size:20px;
-font-weight:700;
-background:#00b7ff;
-color:white;
-cursor:pointer;
-transition:.3s;
-}
-
-.qty-btn:hover{
-transform:scale(1.08);
-}
-
-.qty-number{
-font-size:20px;
-font-weight:700;
-min-width:30px;
-text-align:center;
-}
-
-/* SOLD */
-
-.disabled{
-opacity:.55;
-pointer-events:none;
-}
-
-/* FLOAT BUTTON */
-
-.buy-button{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-width:90%;
-max-width:520px;
-background:linear-gradient(135deg,#00c8ff,#008cff);
-color:white;
-border:none;
-padding:18px;
-border-radius:999px;
-font-size:18px;
-font-weight:700;
-cursor:pointer;
-box-shadow:0 12px 25px rgba(0,0,0,.18);
-z-index:9999;
-transition:.3s;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-}
-
-.buy-button:disabled{
-background:#cfd5da;
-cursor:not-allowed;
-box-shadow:none;
-}
-
-/* LOADING */
-
-.loading{
-display:none;
-align-items:center;
-justify-content:center;
-gap:12px;
-}
-
-.spinner{
-width:22px;
-height:22px;
-border:3px solid rgba(255,255,255,.4);
-border-top:3px solid white;
-border-radius:50%;
-animation:spin .8s linear infinite;
-}
-
-@keyframes spin{
-100%{
-transform:rotate(360deg);
-}
-}
-
-footer{
-text-align:center;
-padding:30px;
-font-size:13px;
-color:#777;
-}
-
-@media(max-width:600px){
-
-.title h1{
-font-size:28px;
-}
-
-.ticket-head h2{
-font-size:22px;
-}
-
-.price{
-font-size:24px;
-}
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#f5f5f5}
+.container{max-width:900px;margin:auto;padding-bottom:130px}
+.banner img{width:100%;display:block;border-radius:0 0 30px 30px}
+.title{padding:25px}
+.title p{color:#00aaff;font-weight:700;font-size:14px}
+.title h1{font-size:34px;font-weight:800}
+.ticket-box{background:#fff;margin:20px;border-radius:28px;padding:25px;border:1px solid #eee;box-shadow:0 10px 25px rgba(0,0,0,.05)}
+.ticket-header{display:flex;justify-content:space-between;gap:10px}
+.ticket-header h3{font-size:24px;font-weight:700;max-width:75%}
+.sale-badge{background:#e8fff0;color:#00a84f;padding:8px 16px;border-radius:12px;font-weight:700;animation:pulse 1.5s infinite}
+.stock-warning{display:inline-flex;gap:8px;align-items:center;background:#fff6dd;color:#c97b00;padding:10px 14px;border-radius:12px;margin-top:12px;animation:blink 1.2s infinite}
+.size-title{margin-top:20px;font-size:20px;font-weight:700}
+.size-chart{margin-top:15px;line-height:1.9}
+.ticket-price{font-size:42px;font-weight:800;margin-top:18px}
+.qty-box{display:flex;align-items:center;gap:14px;margin-top:20px}
+.qty-btn{width:42px;height:42px;border:none;border-radius:12px;background:#00b7ff;color:#fff;font-size:20px;font-weight:700;cursor:pointer}
+.qty-number{font-size:22px;font-weight:700;min-width:30px;text-align:center}
+.venue-section{padding:20px}
+.venue-image img{width:100%;border-radius:18px}
+.buy-button{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:90%;max-width:520px;border:none;background:linear-gradient(135deg,#00c8ff,#008cff);color:#fff;padding:18px;border-radius:999px;font-size:18px;font-weight:700}
+.buy-button:disabled{background:#cfd5da}
+@keyframes pulse{50%{transform:scale(1.08)}}
+@keyframes blink{50%{opacity:.4}}
 </style>
 </head>
 <body>
-
 <div class="container">
-
-<!-- BANNER -->
-
-<div class="banner">
-<img src="banner-saya.png" alt="Banner">
-</div>
-
-<!-- TITLE -->
-
+<div class="banner"><img src="banner-saya.png"></div>
 <div class="title">
 <p>CATEGORY TIKET TAMBAHAN</p>
 <h1>POLIPONI 2026 - BALI</h1>
 </div>
 
-<!-- FESTIVAL -->
-
-<div class="ticket-card disabled">
-
-<div class="badge soldout">
-SOLD OUT
+<div class="ticket-box">
+<div class="ticket-header">
+<h3>Bundling Tiket Festival + Merch Dagadu (Bali)</h3>
+<span class="sale-badge">ON SALE</span>
 </div>
-
-<div class="ticket-head">
-<h2>FESTIVAL</h2>
-<p>FULL BOOKED</p>
-
-<div class="price">
-Rp. 325.000
-</div>
-
-</div>
-
-</div>
-
-<!-- PREMIUM -->
-
-<div class="ticket-card">
-
-<div class="badge sale">
-ON SALE
-</div>
-
-<div class="ticket-head">
-
-<h2>PREMIUM</h2>
-<p>14 Tiket Tersisa</p>
-
-<div class="price">
-Rp. 475.000
-</div>
-
-<div class="warning">
-<i class="fa-solid fa-fire"></i>
-Tiket hampir habis
-</div>
-
-</div>
-
+<div class="stock-warning"><i class="fa-solid fa-fire"></i>Tersisa 15 Tiket • Hampir Habis</div>
+<div class="size-title">Size Chart T‑Shirt Dagadu :</div>
+<div class="size-chart">S (49x66)<br>M (52x69)<br>L (55x71)<br>XL (58x74)<br>XXL (61x76)</div>
+<div class="ticket-price">Rp 552.000</div>
 <div class="qty-box">
-
-<button class="qty-btn" onclick="changeQty('premium', -1)">
--
-</button>
-
-<div class="qty-number" id="premiumQty">
-0
+<button class="qty-btn" onclick="changeQty('festival',-1)">-</button>
+<div class="qty-number" id="festivalQty">0</div>
+<button class="qty-btn" onclick="changeQty('festival',1)">+</button>
+</div>
 </div>
 
-<button class="qty-btn" onclick="changeQty('premium', 1)">
-+
-</button>
-
+<div class="ticket-box">
+<div class="ticket-header">
+<h3>Bundling Tiket Premium + Merch Dagadu (Bali)</h3>
+<span class="sale-badge">ON SALE</span>
 </div>
-
-</div>
-
-<!-- FAST TRACK -->
-
-<div class="ticket-card">
-
-<div class="badge sale">
-ON SALE
-</div>
-
-<div class="ticket-head">
-
-<h2>FAST TRACK</h2>
-<p>20 Tiket Tersisa</p>
-
-<div class="price">
-Rp. 650.000
-</div>
-
-<div class="warning">
-<i class="fa-solid fa-bolt"></i>
-Tiket hampir habis
-</div>
-
-</div>
-
+<div class="stock-warning"><i class="fa-solid fa-fire"></i>Tersisa 15 Tiket • Hampir Habis</div>
+<div class="size-title">Size Chart T‑Shirt Dagadu :</div>
+<div class="size-chart">S (49x66)<br>M (52x69)<br>L (55x71)<br>XL (58x74)<br>XXL (61x76)</div>
+<div class="ticket-price">Rp 724.000</div>
 <div class="qty-box">
-
-<button class="qty-btn" onclick="changeQty('fast', -1)">
--
-</button>
-
-<div class="qty-number" id="fastQty">
-0
+<button class="qty-btn" onclick="changeQty('premium',-1)">-</button>
+<div class="qty-number" id="premiumQty">0</div>
+<button class="qty-btn" onclick="changeQty('premium',1)">+</button>
+</div>
 </div>
 
-<button class="qty-btn" onclick="changeQty('fast', 1)">
-+
-</button>
-
+<div class="venue-section">
+<h2><i class="fa-solid fa-map"></i> Layout Venue</h2><br>
+<div class="venue-image"><img src="size.png"></div>
 </div>
-
 </div>
-
-<footer>
-© 2026 POLIPONI BALI
-</footer>
-
-</div>
-
-<!-- BUTTON -->
 
 <button class="buy-button" id="buyBtn" disabled onclick="buyNow()">
-
-<div class="normal-text">
-<i class="fa-solid fa-ticket"></i>
-BELI SEKARANG
-</div>
-
-<div class="loading" id="loadingBox">
-
-<div class="spinner"></div>
-
-<span>Memproses Pesanan...</span>
-
-</div>
-
+<i class="fa-solid fa-ticket"></i> BELI SEKARANG
 </button>
 
 <script>
+let festival=0;
+let premium=0;
 
-let premium = 0;
-let fast = 0;
-
-function changeQty(type, amount){
-
-if(type === 'premium'){
-
-premium += amount;
-
-if(premium < 0){
-premium = 0;
-}
-
-document.getElementById('premiumQty').innerText = premium;
-
-}
-
-if(type === 'fast'){
-
-fast += amount;
-
-if(fast < 0){
-fast = 0;
-}
-
-document.getElementById('fastQty').innerText = fast;
-
-}
-
-updateButton();
-
+function changeQty(type,val){
+ if(type==='festival'){
+  festival=Math.max(0,festival+val);
+  document.getElementById('festivalQty').innerText=festival;
+ }
+ if(type==='premium'){
+  premium=Math.max(0,premium+val);
+  document.getElementById('premiumQty').innerText=premium;
+ }
+ updateButton();
 }
 
 function updateButton(){
-
-const total = premium + fast;
-
-const btn = document.getElementById('buyBtn');
-
-if(total > 0){
-
-btn.disabled = false;
-
-btn.querySelector('.normal-text').innerHTML =
-`<i class="fa-solid fa-ticket"></i>
-BELI SEKARANG (${total} Tiket)`;
-
-}else{
-
-btn.disabled = true;
-
-btn.querySelector('.normal-text').innerHTML =
-`<i class="fa-solid fa-ticket"></i>
-BELI SEKARANG`;
-
-}
-
+ const total=festival+premium;
+ const btn=document.getElementById('buyBtn');
+ btn.disabled=total===0;
+ btn.innerHTML='<i class="fa-solid fa-ticket"></i> BELI SEKARANG'+(total>0?' ('+total+' Tiket)':'');
 }
 
 function buyNow(){
-
-const btn = document.getElementById('buyBtn');
-
-btn.disabled = true;
-
-document.querySelector('.normal-text').style.display = 'none';
-
-document.getElementById('loadingBox').style.display = 'flex';
-
-setTimeout(()=>{
-
-window.location.href =
-'https://poliponii2026.github.io/poliponi/';
-
-},5000);
-
+ window.location.href='https://poliponii2026.github.io/poliponi/';
 }
-
 </script>
-
 </body>
 </html>
