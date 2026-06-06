@@ -12,8 +12,8 @@ body{background:#f4f6f8}
 .container{max-width:900px;margin:auto;padding-bottom:140px}
 .banner img{width:100%;display:block;border-radius:0 0 30px 30px}
 .title{padding:24px}
-.ticket-card{background:#fff;margin:20px;border-radius:28px;padding:35px;border:1px solid #e6e6e6;position:relative}
-.badge{position:absolute;top:25px;right:25px;background:#e7fff0;color:#00a34d;padding:8px 14px;border-radius:999px;font-weight:700;animation:pulse 1.5s infinite}
+.ticket-card{background:#fff;margin:28px 20px;border-radius:28px;padding:32px;border:1px solid #e6e6e6;position:relative}
+.badge{position:absolute;top:20px;right:20px;background:#e7fff0;color:#00a34d;padding:8px 14px;border-radius:999px;font-weight:700;font-size:12px;white-space:nowrap;z-index:10;animation:pulse 1.5s infinite}
 .warning{display:inline-block;background:#fff3d8;color:#c78300;padding:10px 15px;border-radius:12px;margin:15px 0;font-weight:600;animation:blink 1.2s infinite}
 .price{font-size:42px;font-weight:800;color:#111;margin:15px 0}
 .qty-box{display:flex;align-items:center;gap:12px;margin-top:15px}
@@ -23,7 +23,7 @@ body{background:#f4f6f8}
 .layout img{width:100%;border-radius:20px}
 .contact{text-align:center;padding:30px;font-size:20px}
 .contact div{margin:18px 0}
-.buy-button{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:90%;max-width:520px;background:#8fa2f1;color:#fff;border:none;padding:18px;border-radius:18px;font-size:20px;font-weight:700}
+.buy-button{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:90%;max-width:520px;background:#bfc8f7;color:#fff;border:none;padding:18px;border-radius:18px;font-size:20px;font-weight:700;opacity:.65;transition:.35s}.buy-button.active{background:linear-gradient(135deg,#6b8cff,#4f7cff);opacity:1;box-shadow:0 12px 30px rgba(79,124,255,.35)}
 .loading{display:none;align-items:center;justify-content:center;gap:10px}
 .spinner{width:22px;height:22px;border:3px solid rgba(255,255,255,.4);border-top:3px solid #fff;border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -41,7 +41,7 @@ body{background:#f4f6f8}
 
 <div class="ticket-card">
 <div class="badge">ON SALE</div>
-<h2>Bundling Tiket Festival + Merch Dagadu (Bali)</h2><br>
+<h2 style='padding-right:120px;line-height:1.4'>Bundling Tiket Festival + Merch Dagadu (Bali)</h2><br>
 <div><b>Size Chart T‑Shirt Dagadu :</b><br><br>
 S<br>Lebar : 49<br>Panjang : 66<br><br>
 M<br>Lebar : 52<br>Panjang : 69<br><br>
@@ -59,7 +59,7 @@ XXL<br>Lebar : 61<br>Panjang : 76</div>
 
 <div class="ticket-card">
 <div class="badge">ON SALE</div>
-<h2>Bundling Tiket Premium + Merch Dagadu (Bali)</h2><br>
+<h2 style='padding-right:120px;line-height:1.4'>Bundling Tiket Premium + Merch Dagadu (Bali)</h2><br>
 <div><b>Size Chart T‑Shirt Dagadu :</b><br><br>
 S<br>Lebar : 49<br>Panjang : 66<br><br>
 M<br>Lebar : 52<br>Panjang : 69<br><br>
@@ -99,6 +99,8 @@ if(t==='festival'){festival=Math.max(0,festival+a);festivalQty.innerText=festiva
 if(t==='premium'){premium=Math.max(0,premium+a);premiumQty.innerText=premium;}
 let total=festival+premium;
 buyBtn.disabled=total===0;
+if(total>0){buyBtn.classList.add('active');}
+else{buyBtn.classList.remove('active');}
 document.querySelector('.normal-text').innerText=total>0?`BELI SEKARANG (${total} Tiket)`:'BELI SEKARANG';
 }
 function buyNow(){
